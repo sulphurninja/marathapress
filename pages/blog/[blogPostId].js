@@ -21,7 +21,6 @@ const BlogPage = () => {
     };
     if (blogPostId) {
       fetchBlogs();
-
     }
   }, [blogPostId]);
 
@@ -29,25 +28,25 @@ const BlogPage = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(blogPost, 'wow');
 
-  console.log(blogPost, 'wow')
   return (
     <div>
       <Navbar />
       <div className='mx-8 text-black'>
         {blogPost.map((wow) => (
-
-          <a className="block rounded-lg overflow-hidden border border-gray-300 hover:border-gray-400 hover:shadow-md">
-            <img src={wow.headerImage} alt={wow.title} className="object-cover h-64 w-full" />
-            <div className="p-4">
-              <h1 className="text-2xl underline font-semibold mb-4">{wow.title}</h1>
-              <h2 className="text-lg font-semibold mb-4">{wow.header}</h2>
-              {wow.description.split('\n').map((paragraph, index) => (
-                <p key={index} className="text-black -600 text-justify mb-4">{paragraph}</p>
-              ))}
-            </div>
-          </a>
-
+          <div>
+            <a className="block rounded-lg overflow-hidden border border-gray-300 hover:border-gray-400 hover:shadow-md">
+              <img src={wow.headerImage} alt={wow.title} className="object-cover h-64 w-full" />
+              <div className="p-4">
+                <h1 className="text-2xl underline font-semibold mb-4">{wow.title}</h1>
+                <h2 className="text-lg font-semibold mb-4">{wow.header}</h2>
+                {wow.description.split('\n').map((paragraph, index) => (
+                  <p key={index} className="text-black -600 text-justify mb-4">{paragraph}</p>
+                ))}
+              </div>
+            </a>
+          </div>
         ))}
       </div>
     </div>
