@@ -35,7 +35,7 @@ const BlogPage = () => {
       <Navbar />
       <div className='mx-8 text-black'>
         {blogPost.map((wow) => (
-          <div>
+          <div     key={blogPost._id}>
             <a className="block rounded-lg overflow-hidden border border-gray-300 hover:border-gray-400 hover:shadow-md">
               <img src={wow.headerImage} alt={wow.title} className="object-cover h-64 w-full" />
               <div className="p-4">
