@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const { title, headerImage, header, description, author, date, isFeatured } = req.body;
     try {
       const blogPost = new BlogPost({
-        title,
+        title, 
         headerImage,
         header,
         description,

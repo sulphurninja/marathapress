@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FEA82F]  w-full mt-4 text-black font-nice  text-lg  font-bold -300">
+    <footer className="bg-white  w-full mt-4 text-black border-t-2 pt-2 font-nice  text-lg  font-bold -300">
       <div className=''>
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex items-center justify-center md:justify-start">
             <img
               src="/logo.png"
               alt="Logo"
-              className="h-36 w-36"
+              className="h-24 w-24"
             />
-            <span className="ml-2 text-xl font-bold">Maratha Press - <span className='font-medium'>मराठा प्रेस </span> </span>
+            <span className="ml-2 text-xl font-bold">Maratha Club    <span className='font-medium'> </span> </span>
           </div>
           <div className='ml-12'>
             <h3 className="text-lg underline font-semibold mb-4 ">Contact Us</h3>

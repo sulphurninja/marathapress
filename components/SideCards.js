@@ -31,14 +31,14 @@ const SideBlogCard = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white shadow-lg h-[80%] w-[80%] md:w-[100%] rounded-lg overflow-hidden m-8"
+          className="bg-white shadow-lg w-[80%] md:w-[100%] rounded-lg overflow-hidden m-8"
         >
           <img
             src={featuredBlogPosts[1].headerImage}
             alt="Side Blog"
             className="w-full h-full object-cover"
           />
-          <h1 className='absolute font-bold'>{featuredBlogPosts[1].header}</h1>
+          <h1 className=' font-bold'>{`${featuredBlogPosts[1].header}`.slice(0,-1)}...</h1>
         </motion.div>
       )}
       {featuredBlogPosts.length >= 2 && (
@@ -46,14 +46,14 @@ const SideBlogCard = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white shadow-lg h-[80%] w-[80%] md:w-[100%] rounded-lg overflow-hidden m-8"
+          className="bg-white shadow-lg  w-[80%] md:w-[100%] rounded-lg overflow-hidden m-8"
         >
           <img
             src={featuredBlogPosts[2].headerImage}
             alt="Side Blog"
             className="w-full h-full object-cover"
           />
-          <h1 className='absolute font-bold'>{featuredBlogPosts[1].header}</h1>
+          <h1 className=' font-bold'>{`${featuredBlogPosts[2].header}`.slice(0,-1)}...</h1>
         </motion.div>
       )}
       

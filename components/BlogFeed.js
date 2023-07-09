@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiUser } from 'react-icons/fi';
+import Link from 'next/link';
 
 const BlogFeed = () => {
 
@@ -36,12 +37,13 @@ const BlogFeed = () => {
   return (
     <div className="grid gap-16 mx-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {blogPosts.map((blogPost) => (
+        <Link key={blogPost._id} href={`/blog/${blogPost._id}`}>
         <motion.div
           key={blogPost._id}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white shadow-lg h-fit rounded-lg overflow-hidden"
+          transition={{ duration: 0.2 }}
+          className="bg-white shadow-lg h-full rounded-lg overflow-hidden"
         >
           <img
             src={blogPost.headerImage}
@@ -64,6 +66,7 @@ const BlogFeed = () => {
             </button>
           </div>
         </motion.div>
+        </Link>
       ))}
     </div>
   );

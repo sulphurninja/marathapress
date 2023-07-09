@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const FeaturedBlogCard = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -26,15 +27,15 @@ const FeaturedBlogCard = () => {
 
   return (
     <>
-      {featuredBlogPosts.length > 0 && (
+      {featuredBlogPosts.length > 0 && (  
         <motion.div
           key={featuredBlogPosts[0]._id}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="bg-white shadow-lg cursor-pointer md:w-[50%] rounded-lg overflow-hidden m-8"
         >
-          <img
+          <img  
             src={featuredBlogPosts[0].headerImage}
             alt="Featured Blog"
             className="w-full h-64 object-cover"
@@ -42,9 +43,11 @@ const FeaturedBlogCard = () => {
           <div className="p-6">
             <h2 className="text-xl text-black font-bold mb-4">{featuredBlogPosts[0].title}</h2>
             <p className="text-gray-700 mb-4">{featuredBlogPosts[0].header}</p>
-            <button className="bg-[#FF6701] font-nice text-white px-4 py-2 rounded-md">
+            <Link href={`/blog/${featuredBlogPosts[0]._id}`}>
+            <button  className="bg-[#FF6701] font-nice text-white px-4 py-2 rounded-md">
               अधिक वाचा
             </button>
+            </Link>
           </div>
         </motion.div>
       )}

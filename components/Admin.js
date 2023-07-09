@@ -46,7 +46,7 @@ const AdminPanel = () => {
                 if (response.ok) {
                     setBlogPosts(data.data);
                 } else {
-                    console.error('Failed to fetch blog posts');
+                     console.error('Failed to fetch blog posts');
                 }
             } catch (error) {
                 console.error(error);
