@@ -29,6 +29,10 @@ const BlogPostSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  views: {
+    type: Number,
+    default: 0,
+  },
 });
 
 export default mongoose.models.BlogPost || mongoose.model('BlogPost', BlogPostSchema);
