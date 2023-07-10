@@ -17,7 +17,7 @@ export default function Home() {
         <Head>
           <title>Maratha Club - वावडी (Vaavdi)</title>
           <meta charset="UTF-8" />
-          <meta name="description" content="Maratha Club - Vaavdi (वावडी) Blog" />
+          <meta name="description" content="Maratha Club - Vaavdi (वावडी) Blog maratha club beed" />
           <meta name="keywords" content="Maratha Club,maratha,maratha mandir,
 	
 maratha matrimony,
