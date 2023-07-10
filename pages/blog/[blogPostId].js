@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import axios from 'axios';
+import Head from 'next/head';
 
 
 const BlogPage = () => {
@@ -45,6 +46,13 @@ const BlogPage = () => {
 
   return (
     <div>
+    <Head>
+    <meta charset="UTF-8"/>
+  <meta name="description" content="Vaavdi Blog"/>
+  <meta name="keywords" content={blogPost} />
+  <meta name="author" content="Dr.Balasaheb Pingle"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </Head>
       <Navbar />
       <div className='mx-8 text-black'>
         {blogPost.map((wow) => (
