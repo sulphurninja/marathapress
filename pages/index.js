@@ -238,14 +238,7 @@ first anglo maratha war upsc Maratha, Maratha Press, News, Maratha Club Press, V
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
         <Navbar />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className='text-center font-extrabold text-8xl font-nice'>Vaavdi</h1>
-          <h1 className='text-center font-extrabold text-xl font-nice text-slate-600 mt-4'>वावडी </h1>
-        </motion.div>
+        
         <div className='md:flex mt-8  '>
           <div className='absolute '>
             <h1 className='px-8 md:-mt-4 -mt-4 text-[#000000] font-bold text-3xl font-nice '>Featured Post</h1>

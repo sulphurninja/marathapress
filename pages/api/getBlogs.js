@@ -1,4 +1,4 @@
-import connectDB from '../../utils/connectDB';
+  import connectDB from '../../utils/connectDB';
 import BlogPost from '../../models/BlogPost';
 
 // Connect to MongoDB
