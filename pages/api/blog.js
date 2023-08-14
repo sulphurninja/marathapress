@@ -7,7 +7,7 @@ connectDB();
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Create a new blog post
-    const { title, headerImage, header, description, author, date, isFeatured } = req.body;
+    const { title, headerImage, header, description, author, videoUrl, date, isFeatured } = req.body;
     try {
       const blogPost = new BlogPost({
         title, 
@@ -15,6 +15,7 @@ export default async function handler(req, res) {
         header,
         description,
         author,
+        videoUrl,
         date,
         isFeatured,
       });

@@ -226,7 +226,6 @@ raigad, sinjgad,
 	
 first anglo maratha war upsc Maratha, Maratha Press, News, Maratha Club Press, Vaavdi, Blog, Marathi, Marathi News, Vichaar, Beed, Jai Shivaji, Jai shivrai, Jai jijau"/>
         <meta name="author" content="Dr.Balasaheb Pingle" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
         <Main />

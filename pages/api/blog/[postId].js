@@ -28,6 +28,19 @@ export default async function handler(req, res) {
         res.status(400).json({ success: false });
       }
       break;
+      case 'DELETE':
+            try {
+                const blogPost = await BlogPost.findByIdAndDelete(postId);
+                if (!blogPost) {
+                    return res.status(404).json({ message: 'Blog post not found' });
+                }
+
+                res.status(200).json({ success: true, data: {} });
+            } catch (error) {
+                res.status(400).json({ success: false });
+            }
+            break;
+      
     default:
       res.status(404).json({ message: 'Not found' });
       break;

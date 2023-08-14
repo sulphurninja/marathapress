@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily:{
         'nice': ['Cormorant Garamond', 'serif'],
+        'cool': ['Oswald', 'sans-serif'],
       }
     },
   },

@@ -9,6 +9,9 @@ const BlogPostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  videoUrl:{
+    type: String,
+  },
   header: {
     type: String,
     required: true,
@@ -33,6 +36,12 @@ const BlogPostSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Comment', // This refers to the Comment model
+    },
+  ],
 });
 
 export default mongoose.models.BlogPost || mongoose.model('BlogPost', BlogPostSchema);
